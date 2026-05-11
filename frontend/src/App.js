@@ -13,7 +13,7 @@ function App() {
   const predict = async () => {
 
     const response = await fetch(
-      `http://localhost:10000/predict?exercise_minutes=${exercise}&steps=${steps}&food_calories=${calories}&sleep_hours=${sleep}&water_intake_liters=${water}`
+      `https://YOUR-BACKEND-URL.onrender.com/predict?exercise_minutes=${exercise}&steps=${steps}&food_calories=${calories}&sleep_hours=${sleep}&water_intake_liters=${water}`
     );
 
     const data = await response.json();
