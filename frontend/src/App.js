@@ -12,10 +12,12 @@ function App() {
 
   const predict = async () => {
 
-    const response = await fetch(
-      `https://YOUR-BACKEND-URL.onrender.com/predict?exercise_minutes=${exercise}&steps=${steps}&food_calories=${calories}&sleep_hours=${sleep}&water_intake_liters=${water}`
-    );
-
+    // const response = await fetch(
+    //   `https://YOUR-BACKEND-URL.onrender.com/predict?exercise_minutes=${exercise}&steps=${steps}&food_calories=${calories}&sleep_hours=${sleep}&water_intake_liters=${water}`
+    // );
+const response = await fetch(
+`https://health-weight-project.onrender.com/predict?exercise_minutes=${exercise}&steps=${steps}&food_calories=${calories}&sleep_hours=${sleep}&water_intake_liters=${water}`
+);
     const data = await response.json();
 
     setResult(data.predicted_weight);
